@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My List | Netflix Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'netflix-red': '#E50914',
+                        'netflix-black': '#141414',
+                    },
+                    fontFamily: {
+                        'outfit': ['Outfit', 'sans-serif'],
+                        'bebas': ['Bebas Neue', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-netflix-black text-white font-outfit overflow-x-hidden">
+
+    <header class="fixed top-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-netflix-black shadow-2xl border-b border-white/5">
+        <div class="flex items-center gap-10">
+            <a href="index.html" class="text-netflix-red font-bebas text-4xl tracking-wider cursor-pointer">NETFLIX</a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium uppercase tracking-widest text-[#999]">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="#" class="hover:text-white transition-colors">Browse</a>
+                <a href="my-list.html" class="text-white">My List</a>
+            </nav>
+        </div>
+        <div class="flex items-center gap-6">
+            <div class="w-8 h-8 rounded border-2 border-transparent hover:border-white transition-all overflow-hidden cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100" alt="User">
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32 px-8 md:px-12 pb-20 min-h-screen">
+        <h1 class="font-bebas text-5xl mb-12 tracking-wider reveal">My List</h1>
+        
+        <div id="my-list-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+            <!-- Dynamic Content -->
+            <div id="empty-message" class="col-span-full py-40 text-center text-gray-600">
+                <i class="fas fa-film text-7xl mb-6 opacity-20"></i>
+                <p class="text-2xl font-medium mb-4">You haven't added anything to your list yet.</p>
+                <a href="index.html" class="text-netflix-red hover:underline tracking-widest uppercase font-bold text-sm">Discover Movies</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

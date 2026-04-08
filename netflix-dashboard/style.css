@@ -1,0 +1,157 @@
+/* Premium Netflix Dashboard - Design System */
+:root {
+    --netflix-red: #E50914;
+    --netflix-black: #141414;
+    --sidebar-white: #FFFFFF;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--netflix-black);
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Header Glassmorphism */
+#main-header.scrolled {
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem 2rem;
+}
+
+/* Sidebar Styling */
+aside {
+    transform: translateY(0);
+    transition: var(--transition);
+}
+
+aside>div {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+aside ul li a {
+    transition: var(--transition);
+}
+
+aside ul li a:hover {
+    padding-left: 8px;
+}
+
+/* Movie Card Premium Styling */
+.movie-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition);
+    background: #1c1c1c;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.movie-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    border-color: var(--netflix-red);
+}
+
+.movie-card img {
+    width: 100%;
+    aspect-ratio: 11/16;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.movie-card:hover img {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+}
+
+.movie-card:hover .card-overlay {
+    opacity: 1;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--netflix-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--netflix-red);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Modal Transitions */
+#movie-modal.active .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#movie-modal.active .modal-overlay {
+    opacity: 1;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+    #hero {
+        height: 60vh;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    #hero-title {
+        font-size: 4rem;
+    }
+
+    .dashboard-content {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100% !important;
+    }
+}

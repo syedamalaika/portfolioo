@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust - Explore The World</title>
+    <!-- Google Fonts: Inter & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="logo">Wander<span>Lust</span>.</a>
+            <nav class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#packages">Tours</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#reviews">Reviews</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-outline">Contact Us</a>
+                <a href="#booking" class="btn btn-primary">Book Now</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle"><i class="ri-menu-line"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Section with Slider -->
+    <section id="home" class="hero">
+        <div class="slider-container">
+            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=2068&auto=format&fit=crop');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=2070&auto=format&fit=crop');"></div>
+        </div>
+        <div class="overlay"></div>
+        <div class="container hero-content text-center">
+            <span class="tagline">Your Adventure Awaits</span>
+            <h1>Explore The World With Us</h1>
+            <p class="subtitle">Discover amazing destinations, immerse yourself in new cultures, and plan your perfect trip today.</p>
+            <div class="hero-btns">
+                <a href="#booking" class="btn btn-primary btn-lg">Book Now</a>
+                <a href="#packages" class="btn btn-outline-light btn-lg">View Packages</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search/Filter Bar -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <div class="search-item">
+                    <label>Location</label>
+                    <input type="text" placeholder="Where are you going?">
+                </div>
+                <div class="search-item">
+                    <label>Date</label>
+                    <input type="date">
+                </div>
+                <div class="search-item">
+                    <label>Guests</label>
+                    <select>
+                        <option>1 Guest</option>
+                        <option>2 Guests</option>
+                        <option>3+ Guests</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary search-btn"><i class="ri-search-line"></i> Search</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popular Destinations -->
+    <section id="destinations" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Popular Destinations</h2>
+                <p>Top rated locations recommended by our travelers.</p>
+            </div>
+            
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1000&auto=format&fit=crop" alt="Bali">
+                        <div class="location-badge"><i class="ri-map-pin-line"></i> Indonesia</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Bali, Indonesia</h3>
+                        <p>Tropical beaches, vibrant culture, and lush landscapes perfect for relaxation.</p>
+                        <div class="card-footer">
+                            <span class="price">From $899</span>
+                            <a href="#" class="btn-link">Explore <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1000&auto=format&fit=crop" alt="Venice">
+                        <div class="location-badge"><i class="ri-map-pin-line"></i> Italy</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Venice, Italy</h3>
+                        <p>Experience the romance of canals, historic architecture, and Italian cuisine.</p>
+                        <div class="card-footer">
+                            <span class="price">From $1,299</span>
+                            <a href="#" class="btn-link">Explore <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1000&auto=format&fit=crop" alt="Cinque Terre">
+                        <div class="location-badge"><i class="ri-map-pin-line"></i> Italy</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Cinque Terre, Italy</h3>
+                        <p>Colorful villages on the rugged Italian Riviera coastline.</p>
+                        <div class="card-footer">
+                            <span class="price">From $1,099</span>
+                            <a href="#" class="btn-link">Explore <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages / Tours Section -->
+    <section id="packages" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Best Selling Tours</h2>
+                <p>All-inclusive packages for a hassle-free vacation.</p>
+            </div>
+
+            <div class="packages-grid">
+                <!-- Package 1 -->
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1000&auto=format&fit=crop" alt="Paris">
+                        <span class="discount-badge">20% OFF</span>
+                    </div>
+                    <div class="package-content">
+                        <div class="package-meta">
+                            <span><i class="ri-time-line"></i> 5 Days</span>
+                            <span><i class="ri-user-line"></i> 2 People</span>
+                        </div>
+                        <h3>Romantic Paris Getaway</h3>
+                        <p class="description">Visit the Eiffel Tower, Louvre Museum, and enjoy a Seine River cruise.</p>
+                        <div class="rating">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-line"></i>
+                            <span>(4.8)</span>
+                        </div>
+                        <div class="package-price-row">
+                            <div class="price">
+                                <span class="old-price">$1,800</span>
+                                <span class="new-price">$1,440</span>
+                            </div>
+                            <button class="btn btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?q=80&w=1000&auto=format&fit=crop" alt="Maldives">
+                        <span class="discount-badge">Hot Deal</span>
+                    </div>
+                    <div class="package-content">
+                        <div class="package-meta">
+                            <span><i class="ri-time-line"></i> 7 Days</span>
+                            <span><i class="ri-user-line"></i> 2 People</span>
+                        </div>
+                        <h3>Maldives Paradise</h3>
+                        <p class="description">Stay in overwater bungalows, snorkel in crystal clear waters.</p>
+                        <div class="rating">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <div class="package-price-row">
+                            <div class="price">
+                                <span class="new-price">$2,200</span>
+                            </div>
+                            <button class="btn btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1000&auto=format&fit=crop" alt="Tokyo">
+                    </div>
+                    <div class="package-content">
+                        <div class="package-meta">
+                            <span><i class="ri-time-line"></i> 6 Days</span>
+                            <span><i class="ri-user-line"></i> Family</span>
+                        </div>
+                        <h3>Tokyo Cultural Trip</h3>
+                        <p class="description">Explore ancient temples, modern technology, and delicious sushi.</p>
+                        <div class="rating">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                            <span>(4.2)</span>
+                        </div>
+                        <div class="package-price-row">
+                            <div class="price">
+                                <span class="new-price">$1,650</span>
+                            </div>
+                            <button class="btn btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>How It Works</h2>
+                <p>Plan your trip in 3 simple steps.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-icon"><i class="ri-map-pin-user-line"></i></div>
+                    <h3>Choose Destination</h3>
+                    <p>Browse our extensive list of destinations and pick your dream spot.</p>
+                </div>
+                <div class="step-arrow"><i class="ri-arrow-right-line"></i></div>
+                <div class="step-card">
+                    <div class="step-icon"><i class="ri-calendar-check-line"></i></div>
+                    <h3>Pick a Package</h3>
+                    <p>Select a tour package that suits your budget and preferences.</p>
+                </div>
+                <div class="step-arrow"><i class="ri-arrow-right-line"></i></div>
+                <div class="step-card">
+                    <div class="step-icon"><i class="ri-flight-takeoff-line"></i></div>
+                    <h3>Book & Enjoy</h3>
+                    <p>Confirm your booking online and get ready for an unforgettable journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Reviews -->
+    <section id="reviews" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>What Travelers Say</h2>
+                <p>Real stories from our happy customers.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="ri-double-quotes-l"></i></div>
+                    <p>"The trip to Bali was absolutely magical. The hotels were top-notch and the guides were so friendly. exacty what we needed."</p>
+                    <div class="reviewer">
+                        <img src="https://ui-avatars.com/api/?name=Alice+M&background=random" alt="User">
+                        <div class="info">
+                            <h4>Alice Martin</h4>
+                            <span>Solo Traveler</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="ri-double-quotes-l"></i></div>
+                    <p>"Booking was seamless. We saved so much time and money with the family package to Tokyo. Highly recommended!"</p>
+                    <div class="reviewer">
+                        <img src="https://ui-avatars.com/api/?name=James+P&background=random" alt="User">
+                        <div class="info">
+                            <h4>James Peterson</h4>
+                            <span>Family Vacation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="ri-double-quotes-l"></i></div>
+                    <p>"Incredible experience in Italy. Every detail was taken care of. I didn't verify a thing, just enjoyed the views!"</p>
+                    <div class="reviewer">
+                        <img src="https://ui-avatars.com/api/?name=Emma+S&background=random" alt="User">
+                        <div class="info">
+                            <h4>Emma Stone</h4>
+                            <span>Couple's Retreat</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="cta-section section-padding text-center">
+        <div class="overlay"></div>
+        <div class="container relative z-10">
+            <h2>Plan Your Adventure Today</h2>
+            <p>Don't wait for the perfect moment. Take the moment and make it perfect.</p>
+            <a href="#booking" class="btn btn-primary btn-lg">Book Your Trip Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="#" class="logo-footer">Wander<span>Lust</span>.</a>
+                    <p>Your trusted partner for exploring the world. We make travel easy, affordable, and unforgettable.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#"><i class="ri-youtube-line"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#packages">Tours</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for travel tips and exclusive offers.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault()">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit"><i class="ri-send-plane-fill"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 WanderLust Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

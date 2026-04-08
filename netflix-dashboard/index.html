@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Dashboard | Premium UI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'netflix-red': '#E50914',
+                        'netflix-black': '#141414',
+                        'netflix-gray': '#181818',
+                    },
+                    fontFamily: {
+                        'outfit': ['Outfit', 'sans-serif'],
+                        'bebas': ['Bebas Neue', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#141414] text-white font-outfit overflow-x-hidden">
+
+    <!-- Top Navigation -->
+    <header class="fixed top-0 w-full z-50 flex items-center justify-between px-8 py-4 transition-all duration-300" id="main-header">
+        <div class="flex items-center gap-10">
+            <span class="text-netflix-red font-bebas text-4xl tracking-wider cursor-pointer">NETFLIX</span>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium uppercase tracking-widest text-[#999]">
+                <a href="#" class="hover:text-white transition-colors">Browse</a>
+                <a href="#" class="hover:text-white transition-colors">DVD</a>
+                <a href="#" class="hover:text-white transition-colors">Search</a>
+            </nav>
+        </div>
+        <div class="flex items-center gap-6">
+            <button class="text-gray-400 hover:text-white"><i class="fas fa-bell"></i></button>
+            <div class="w-8 h-8 rounded overflow-hidden cursor-pointer border-2 border-transparent hover:border-white transition-all">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100" alt="User">
+            </div>
+        </div>
+    </header>
+
+    <main class="relative">
+        <!-- Hero Section -->
+        <section id="hero" class="relative h-[80vh] w-full flex items-center px-12 pt-20">
+            <div id="hero-background" class="absolute inset-0 -z-10 overflow-hidden">
+                <img id="hero-img" src="" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#141414] via-[#141414]/40 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent"></div>
+            </div>
+
+            <div class="max-w-3xl transform translate-y-10 opacity-0 transition-all duration-1000 ease-out" id="hero-content">
+                <h1 id="hero-title" class="font-bebas text-7xl md:text-9xl mb-4 tracking-tight leading-none text-white drop-shadow-2xl"></h1>
+                <div class="flex items-center gap-4 mb-6 text-sm font-semibold tracking-wider">
+                    <span id="hero-rating" class="text-netflix-red"><i class="fas fa-star mr-1"></i></span>
+                    <span id="hero-year" class="text-gray-400"></span>
+                    <span id="hero-quality" class="border border-gray-600 px-2 py-0.5 rounded text-[10px] text-gray-400">TV-MA</span>
+                    <span id="hero-duration" class="text-gray-400"></span>
+                </div>
+                <p id="hero-description" class="text-gray-300 text-lg md:text-xl mb-8 leading-relaxed line-clamp-3 max-w-xl"></p>
+                <div class="flex items-center gap-4">
+                    <button class="bg-netflix-red text-white px-10 py-3 rounded font-bold uppercase tracking-widest hover:bg-[#ff0d1a] transition-all flex items-center gap-2">
+                        <i class="fas fa-play"></i> Play
+                    </button>
+                    <button class="bg-[#2a2a2a]/80 text-white px-10 py-3 rounded font-bold uppercase tracking-widest hover:bg-[#3d3d3d] transition-all flex items-center gap-2 backdrop-blur-md">
+                        <i class="fas fa-plus"></i> My List
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dots -->
+            <div class="absolute bottom-12 right-12 flex gap-3">
+                <div class="w-2.5 h-2.5 rounded-full bg-netflix-red cursor-pointer"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-gray-600 hover:bg-gray-400 cursor-pointer transition-colors"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-gray-600 hover:bg-gray-400 cursor-pointer transition-colors"></div>
+            </div>
+        </section>
+
+        <!-- Dashboard Content Area -->
+        <div class="flex flex-col md:flex-row px-4 md:px-12 pb-20 -mt-10 relative z-10 gap-8">
+            <!-- Sidebar -->
+            <aside class="w-full md:w-64 flex-shrink-0">
+                <div class="bg-white rounded-t-lg p-6">
+                    <h3 class="text-black font-bebas text-2xl tracking-wider mb-6">Browse</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="flex items-center justify-between text-netflix-red font-bold text-sm tracking-wide">Recent Releases <i class="fas fa-chevron-right text-[10px]"></i></a></li>
+                        <li><a href="#" class="flex items-center justify-between text-gray-800 hover:text-netflix-red font-medium text-sm tracking-wide transition-colors">Netflix Originals</a></li>
+                        <li><a href="#" class="flex items-center justify-between text-gray-800 hover:text-netflix-red font-medium text-sm tracking-wide transition-colors">Recently Added</a></li>
+                        <li><a href="#" class="flex items-center justify-between text-gray-800 hover:text-netflix-red font-medium text-sm tracking-wide transition-colors">Documentaries</a></li>
+                        <li><a href="#" class="flex items-center justify-between text-gray-800 hover:text-netflix-red font-medium text-sm tracking-wide transition-colors">Comedy</a></li>
+                        <li><a href="#" class="flex items-center justify-between text-gray-800 hover:text-netflix-red font-medium text-sm tracking-wide transition-colors">Action</a></li>
+                        <li><a href="#" class="flex items-center justify-between text-gray-800 hover:text-netflix-red font-medium text-sm tracking-wide transition-colors">Science Fiction</a></li>
+                        <li><a href="#" class="flex items-center justify-between text-gray-800 hover:text-netflix-red font-medium text-sm tracking-wide transition-colors">Thriller</a></li>
+                        <li><a href="#" class="flex items-center justify-between text-gray-800 hover:text-netflix-red font-medium text-sm tracking-wide transition-colors">Mystery</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Listing -->
+            <div class="flex-grow">
+                <!-- Search Bar -->
+                <div class="mb-8 relative">
+                    <i class="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                    <input type="text" id="dashboard-search" placeholder="Search for movies, TV shows, actors..." 
+                        class="w-full bg-[#1c1c1c] border border-gray-800 text-white rounded-lg py-4 pl-14 pr-6 focus:outline-none focus:border-netflix-red transition-all shadow-xl">
+                </div>
+
+                <!-- Movie Grid -->
+                <div id="movie-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                    <!-- Dynamic Content -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="movie-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <div class="modal-overlay absolute inset-0 bg-black/80 backdrop-blur-md"></div>
+        <div class="modal-content relative bg-netflix-black w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl scale-95 opacity-0 transition-all duration-300">
+            <button id="close-modal" class="absolute top-6 right-6 z-50 bg-black/40 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-black/60 transition-all border border-white/10"><i class="fas fa-times text-xl"></i></button>
+            
+            <div class="grid grid-cols-1 md:grid-cols-5 h-full">
+                <!-- Modal Left: Banner -->
+                <div class="md:col-span-3 relative h-64 md:h-auto overflow-hidden">
+                    <img id="modal-banner" src="" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-netflix-black md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-netflix-black"></div>
+                </div>
+                
+                <!-- Modal Right: Info -->
+                <div class="md:col-span-2 p-10 flex flex-col justify-center">
+                    <h2 id="modal-title" class="font-bebas text-5xl mb-4 tracking-wider"></h2>
+                    <div class="flex items-center gap-4 mb-6 text-sm font-bold">
+                        <span id="modal-rating" class="text-green-500"></span>
+                        <span id="modal-year" class="text-gray-400"></span>
+                        <span id="modal-duration" class="text-gray-400"></span>
+                    </div>
+                    <p id="modal-description" class="text-gray-300 text-lg mb-8 leading-relaxed"></p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-netflix-red text-white flex-grow py-3 rounded font-bold uppercase tracking-widest hover:bg-[#ff0d1a] transition-all flex items-center justify-center gap-2">
+                            <i class="fas fa-play"></i> Watch Now
+                        </button>
+                        <button id="modal-add-list" class="w-14 h-14 bg-[#2a2a2a] rounded flex items-center justify-center hover:bg-[#3a3a3a] transition-all border border-white/5">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
